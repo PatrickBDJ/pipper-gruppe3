@@ -1,5 +1,4 @@
 const myTextArea = document.getElementById('pip-content-modal');
-const characterCounter = document.getElementById('counter-modal');
 
 myTextArea.addEventListener('input', () =>{
     myTextArea.value.length;
