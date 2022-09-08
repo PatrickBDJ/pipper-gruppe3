@@ -34,10 +34,12 @@
   font-style: normal;
 }
 
-/* Pip feltet */
-/* .pip{
-    
-} */
+.avatar-img{
+  height: 50px;
+  width: auto;
+  padding-bottom: 10px;
+  display: block;
+}
 
 #pip-name {
   display: block;
