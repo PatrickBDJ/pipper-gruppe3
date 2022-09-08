@@ -18,26 +18,39 @@ myTextArea1.addEventListener("input", () => {
 
 // Ny pip
 const form = document.querySelector("#form-id");
+const template = document.querySelector("#new-pip");
+
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-  console.log("hi", event);
-  const formTitel = document.querySelector("#pip-name").value;
-  const formText = document.querySelector("#pip-content").value;
-  console.log("Titel: ", formTitel);
-  console.log("Besked: ", formText);
-  fillTemplate(formTitel, formText);
-});
-
-function fillTemplate(formTitel, formText) {
-  const template = document.querySelector("#new-pip");
+  const input = new FormData(form);
+  console.log("Titel: ", input.get("pip-name"));
+  console.log("Besked: ", input.get("pip-content"));
+  
   const newNode = document.importNode(template.content, true);
-  newNode.querySelector("h1").textContent = formTitel;
-  newNode.querySelector("p").textContent = formText;
-  document.querySelector("#all-new-notes").appendChild(newNode);
-}
+  newNode.querySelector("h1").textContent = input.get("pip-name");
+  newNode.querySelector("p").textContent = input.get("pip-content");
+  document.querySelector("#all-new-notes").prepend(newNode);
+});
 
 // Ny pip i modal
 const form1 = document.querySelector("#form-id-modal");
+const template1 = document.querySelector("#new-pip");
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const input = new FormData(form);
+  console.log("Titel: ", input.get("pip-name-modal"));
+  console.log("Besked: ", input.get("pip-content-modal"));
+  
+  const newNode = document.importNode(template.content, true);
+  newNode.querySelector("h1").textContent = input.get("pip-name-modal");
+  newNode.querySelector("p").textContent = input.get("pip-content-modal");
+  document.querySelector("#all-new-notes").prepend(newNode);
+});
+
+
+
+/* const form1 = document.querySelector("#form-id-modal");
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   console.log("hi", event);
@@ -54,4 +67,4 @@ function fillTemplate(formTitel, formText) {
   newNode.querySelector("h1").textContent = formTitel;
   newNode.querySelector("p").textContent = formText;
   document.querySelector("#all-new-notes").appendChild(newNode);
-}
+} */
