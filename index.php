@@ -1,5 +1,5 @@
 <?php 
-require "./../.env";
+require "../.env";
 
 header("Access-Control-Allow-Origin: *"); 
 header("Content-Type: application/json; charset=UTF-8"); 
@@ -30,8 +30,26 @@ try {
 }
 }
 elseif($requestType == "POST"){
-    echo "You sent a post!";
+    $input = (array) json_decode(file_get_contents('php://input'), TRUE);
+    echo $input["username"];
+    echo $input["message"];
+
+    $statement = "
+      INSERT INTO pip
+        (username, message, avatar)
+      VALUES
+        (:username, :message, :avatar);
+    ";
+    $conn = new PDO("mysql:host=$servername;dbname=pipper", $username, $password);
+    $statement = $conn->prepare($statement);
+    $statement->execute(array(
+      'username' => $input['username'],
+      'message' => $input['message'],
+      'avatar' => "#"
+    ));
 }
+
+
 
 
 ?> 
