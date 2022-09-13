@@ -36,15 +36,15 @@ form.addEventListener("submit", (event) => {
 const form1 = document.querySelector("#form-id-modal");
 const template1 = document.querySelector("#new-pip");
 
-form.addEventListener("submit", (event) => {
+form1.addEventListener("submit", (event) => {
   event.preventDefault();
-  const input = new FormData(form);
-  console.log("Titel: ", input.get("pip-name-modal"));
-  console.log("Besked: ", input.get("pip-content-modal"));
+  const input1 = new FormData(form1);
+  console.log("Titel: ", input1.get("pip-name-modal"));
+  console.log("Besked: ", input1.get("pip-content-modal"));
   
-  const newNode = document.importNode(template.content, true);
-  newNode.querySelector("h1").textContent = input.get("pip-name-modal");
-  newNode.querySelector("p").textContent = input.get("pip-content-modal");
+  const newNode = document.importNode(template1.content, true);
+  newNode.querySelector("h1").textContent = input1.get("pip-name-modal");
+  newNode.querySelector("p").textContent = input1.get("pip-content-modal");
   document.querySelector("#all-new-notes").prepend(newNode);
 });
 
