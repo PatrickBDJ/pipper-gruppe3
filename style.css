@@ -13,8 +13,6 @@
 .sidebar {
   flex-direction: column;
   max-width: 20%;
-  border: #E7E7E8 solid 1px;
-  border-style: none solid none none;
   padding: 2%;
   height: 100vh;
   
@@ -63,6 +61,8 @@ a:hover {
 
 /* Sidens indhold */
 .content {
+  border: #E7E7E8 solid 2px;
+  border-style: none none none solid;
   width: 50%;
   padding: 2%;
 }
@@ -116,6 +116,12 @@ a:hover {
 /* Nye pips */
 .pip-box{
   border: #E7E7E8 solid 1px;
+  padding: 2%;
+  margin: 2% 0;
+}
+
+.pip-box:hover{
+  background-color: #E7E7E8;
 }
 
 
