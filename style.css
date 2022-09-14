@@ -41,7 +41,7 @@ a:hover {
   color: #1D9BF0;
 }
 
-.sidebar button {
+.sidebar .btn {
   background-color: #1D9BF0;
   border-radius: 25px;
   color: #ffffff;
@@ -53,7 +53,7 @@ a:hover {
 
 }
 
-.sidebar button:hover {
+.sidebar .btn:hover {
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
@@ -116,6 +116,7 @@ a:hover {
 /* Nye pips */
 .pip-box {
   border: #E7E7E8 solid 1px;
+  border-radius: 5px;
   padding: 2%;
   margin: 2% 0;
 }
@@ -145,9 +146,6 @@ a:hover {
   width: 100%;
 }
 
-/* .modal{
-    
-} */
 
 /* Sidebar titler er gemte, medmindre skærmen er 1024px eller større */
 .sidebar-titles {
