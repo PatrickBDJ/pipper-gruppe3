@@ -20,7 +20,7 @@
 .sidebar a {
   display: block;
   text-decoration: none;
-  color: #1D9BF0;
+  color: #000;
 }
 
 .sidebar-titles{
@@ -29,15 +29,15 @@
 
 a {
   border-radius: 25px;
-  color: #1D9BF0;
+  color: #000;
   margin: 0 -.25rem;
   padding: 2% .25rem;
 
 }
 
 a:hover {
-  box-shadow: inset 200px 0 0 0 #1D9BF0;
-  color: white;
+  box-shadow: inset 200px 0 0 0 #E7E7E8;
+  color: #1D9BF0;
 }
 
 .sidebar button{
@@ -46,6 +46,7 @@ a:hover {
   color: #ffffff;
   margin: 2% -.25rem;
   padding: 4px 56px;
+  font-weight: 600;
 }
 
 
