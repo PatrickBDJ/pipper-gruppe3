@@ -13,8 +13,11 @@
 .sidebar {
   flex-direction: column;
   max-width: 20%;
-  border-style: none;
+  border: #E7E7E8 solid 1px;
+  border-style: none solid none none;
   padding: 2%;
+  height: 100vh;
+  
 }
 
 .sidebar a {
@@ -61,13 +64,13 @@ a:hover {
 /* Sidens indhold */
 .content {
   width: 80%;
-  border-style: none none none solid;
   padding: 2%;
 }
 
 .content h1 {
   font-weight: 500;
   font-style: normal;
+  font-size: larger;
 }
 
 .avatar-img{
@@ -79,11 +82,13 @@ a:hover {
 }
 
 #pip-name{
-  width: 300px;
+  width: 456px;
 }
 
 #pip-content{
-  width: 354px;
+  height: 20vh;
+  width: 510px;
+
 }
 
 
