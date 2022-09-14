@@ -15,7 +15,7 @@
   <div class="container">
     <!-- Sidebar -->
     <nav class="sidebar">
-      <a href="#"><img src="assets/twitter.svg" alt="Logo" /></a>
+      <a href="#" class="sidebar-logo"><img src="assets/twitter.svg" alt="Logo" /></a>
 
       <a href="#" class="sidebar-link"><img src="assets/search.svg" alt="søg" /><span
           class="sidebar-titles">Søg</span></a>
@@ -46,7 +46,7 @@
             </div>
             <div class="modal-body">
               <form id="form-id-modal">
-                <div id="user">
+                <div class="user">
                   <img class="avatar-img" src="https://avatars.dicebear.com/api/male/Lalit%20Kishore.svg" />
                   <input type="text" id="pip-name-modal" name="pip-name-modal" maxlength="20"
                     placeholder="Brugernavn?" />
@@ -78,7 +78,7 @@
     <div class="content">
       <h1>pipper</h1>
       <form id="form-id" class="pip">
-        <div id="user">
+        <div class="user">
           <img class="avatar-img" src="https://avatars.dicebear.com/api/male/Lalit%20Kishore.svg" />
           <input type="text" id="pip-name" name="pip-name" maxlength="20" placeholder="Brugernavn?" />
         </div>
@@ -95,8 +95,10 @@
 
   <template id="new-pip">
     <div class="pip-box">
-      <img class="avatar-img" src="https://avatars.dicebear.com/api/male/Lalit%20Kishore.svg">
-      <h1>username</h1>
+      <div class="user-pip">
+        <img class="avatar-img" src="https://avatars.dicebear.com/api/male/Lalit%20Kishore.svg">
+        <h1>username</h1>
+      </div>
       <p>note</p>
       <div class="interact">
         <img class="pip-icons" id="comment" src="/assets/comment.svg">
