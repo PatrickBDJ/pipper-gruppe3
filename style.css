@@ -74,25 +74,17 @@ a:hover {
   height: 50px;
   width: auto;
   margin-bottom: 10px;
-  display: block;
   border: #E7E7E8 solid 1px;
   border-radius: 100%;
 }
 
-#pip-name {
-  display: block;
-  width: auto;
+#pip-name{
+  width: 300px;
 }
 
-#pip-content {
-  display: block;
+#pip-content{
+  width: 354px;
 }
-
-.pip-box{
-  border: 1px solid black;
-}
-
-
 
 
 /* Modal */
