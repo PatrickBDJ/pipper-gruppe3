@@ -13,7 +13,7 @@
 .sidebar {
   flex-direction: column;
   max-width: 20%;
-  border-style: none solid none none;
+  border-style: none;
   padding: 2%;
 }
 
