@@ -24,7 +24,7 @@
   color: #000;
 }
 
-.sidebar-titles{
+.sidebar-titles {
   padding-left: 10px;
 }
 
@@ -41,7 +41,7 @@ a:hover {
   color: #1D9BF0;
 }
 
-.sidebar button{
+.sidebar button {
   background-color: #1D9BF0;
   border-radius: 25px;
   color: #ffffff;
@@ -53,7 +53,7 @@ a:hover {
 
 }
 
-.sidebar button:hover{
+.sidebar button:hover {
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
@@ -73,7 +73,7 @@ a:hover {
   font-size: larger;
 }
 
-.avatar-img{
+.avatar-img {
   height: 50px;
   width: auto;
   margin: 10px;
@@ -81,23 +81,23 @@ a:hover {
   border-radius: 100%;
 }
 
-#pip-name{
-  width: 436px;
+#pip-name {
+  width: 85%;
 }
 
-#pip-content{
+#pip-content {
   height: 20vh;
-  width: 510px;
+  width: 100%;
 }
 
-#buttom-bar{
+.buttom-bar {
   display: flex;
   align-items: baseline;
   justify-content: end;
   margin-right: 2%;
 }
 
-#buttom-bar input{
+.buttom-bar input {
   background-color: #1D9BF0;
   border: none;
   border-radius: 25px;
@@ -109,26 +109,40 @@ a:hover {
   transition-duration: 0.4s;
 }
 
-#buttom-bar input:hover{
+.buttom-bar input:hover {
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
 /* Nye pips */
-.pip-box{
+.pip-box {
   border: #E7E7E8 solid 1px;
   padding: 2%;
   margin: 2% 0;
 }
 
-.pip-box:hover{
+.pip-box:hover {
   background-color: #E7E7E8;
 }
 
 
 /* Modal */
+#form-id-modal {
+  padding: 10px;
+  
+}
+
 .btn {
   font-size: 1rem;
   padding: 0;
+}
+
+#pip-name-modal {
+  width: 83%
+}
+
+#pip-content-modal {
+  height: 20vh;
+  width: 100%;
 }
 
 /* .modal{

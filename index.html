@@ -46,12 +46,17 @@
             </div>
             <div class="modal-body">
               <form id="form-id-modal">
-                <img class="avatar-img" src="https://avatars.dicebear.com/api/male/Lalit%20Kishore.svg" />
-                <input type="text" id="pip-name-modal" name="pip-name-modal" maxlength="20" placeholder="Brugernavn?" />
+                <div id="user">
+                  <img class="avatar-img" src="https://avatars.dicebear.com/api/male/Lalit%20Kishore.svg" />
+                  <input type="text" id="pip-name-modal" name="pip-name-modal" maxlength="20"
+                    placeholder="Brugernavn?" />
+                </div>
                 <textarea name="pip-content-modal" id="pip-content-modal" placeholder="Hvad sker der?" maxlength="255"
                   cols="30" rows="10"></textarea>
-                <div id="counter-modal">0 / 255 karakterer tilbage</div>
-                <input type="submit" value="Pip!" id="pip-submit1" />
+                <div class="buttom-bar">
+                  <div id="counter-modal">0 / 255 karakterer tilbage</div>
+                  <input type="submit" value="pip!" id="pip-submit1" />
+                </div>
               </form>
             </div>
             <!--               <div class="modal-footer">
@@ -79,7 +84,7 @@
         </div>
         <textarea name="pip-content" id="pip-content" placeholder="Hvad sker der?" maxlength="255" cols="30"
           rows="10"></textarea>
-        <div id="buttom-bar">
+        <div class="buttom-bar">
           <div id="counter-content">0 / 255 karakterer tilbage</div>
           <input type="submit" value="pip!" id="pip-submit" />
         </div>
