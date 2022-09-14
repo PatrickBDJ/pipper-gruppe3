@@ -122,12 +122,45 @@ a:hover {
 }
 
 .pip-box:hover {
-  background-color: #E7E7E8;
+  background-color: #e7e7e834;
+}
+
+.interact {
+  display: flex;
+  justify-content: space-around;
 }
 
 .pip-icons {
   width: 20px;
+  cursor: pointer;
+  transition-duration: 0.4s;
 }
+
+#comment:hover {
+  background-color: #1d9cf081;
+  border-radius: 5px;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#retweet:hover {
+  background-color: #59e99581;
+  border-radius: 5px;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#like:hover {
+  background-color: #f86b6b83;
+  border-radius: 5px;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#share:hover {
+  background-color: #1d9cf081;
+  border-radius: 5px;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+
 
 
 /* Modal */
