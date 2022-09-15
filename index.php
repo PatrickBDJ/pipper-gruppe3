@@ -51,5 +51,26 @@ elseif($requestType == "POST"){
 
 
 
+// if( isset($_POST['pip-name']) && isset($_POST['pip-content']) ){
+//   $name = $_POST['pip-name'];
+//   $message = $_POST['pip-content'];
+   
+//   echo "navn: ".$name." besked: ".$message;
+//   $statement = "
+//       INSERT INTO pip
+//         (username, message, avatar)
+//       VALUES
+//         (:username, :message, :avatar);
+//     ";
+//     $conn = new PDO("mysql:host=$servername;dbname=pipper", $username, $password);
+//     $statement = $conn->prepare($statement);
+//     $statement->execute(array(
+//       'username' => $name,
+//       'message' => $message,
+//       'avatar' => "#"
+//     ));
+// }
+
+
 
 ?> 

@@ -25,6 +25,16 @@ form.addEventListener("submit", (event) => {
   const input = new FormData(form);
   console.log("Titel: ", input.get("pip-name"));
   console.log("Besked: ", input.get("pip-content"));
+
+  const http = new XMLHttpRequest();
+  http.open("POST", "http://localhost:8000", true);
+  // http.setRequestHeader()
+  http.send(JSON.stringify({
+    "username": input.get("pip-name"),
+    "message": input.get("pip-content"),
+  }));
+
+
   
   const newNode = document.importNode(template.content, true);
   newNode.querySelector("h1").textContent = input.get("pip-name");
@@ -46,25 +56,11 @@ form1.addEventListener("submit", (event) => {
   newNode.querySelector("h1").textContent = input1.get("pip-name-modal");
   newNode.querySelector("p").textContent = input1.get("pip-content-modal");
   document.querySelector("#all-new-notes").prepend(newNode);
+
+  $('#exampleModalCenter').modal('hide')
+
 });
 
 
 
-/* const form1 = document.querySelector("#form-id-modal");
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
-  console.log("hi", event);
-  const formTitel1 = document.querySelector("#pip-name-modal").value;
-  const formText1 = document.querySelector("#pip-content-modal").value;
-  console.log("Titel: ", formTitel1);
-  console.log("Besked: ", formText1);
-  fillTemplate(formTitel1, formText1);
-});
 
-function fillTemplate(formTitel, formText) {
-  const template = document.querySelector("#new-pip");
-  const newNode = document.importNode(template.content, true);
-  newNode.querySelector("h1").textContent = formTitel;
-  newNode.querySelector("p").textContent = formText;
-  document.querySelector("#all-new-notes").appendChild(newNode);
-} */

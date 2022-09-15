@@ -48,11 +48,11 @@
             <div class="modal-body">
               <form id="form-id-modal">
                 <img class="avatar-img" src="https://avatars.dicebear.com/api/male/Lalit%20Kishore.svg" />
-                <input type="text" id="pip-name-modal" name="pip-name-modal" maxlength="20" placeholder="Brugernavn?" />
+                <input type="text" id="pip-name-modal" name="pip-name-modal" maxlength="15" placeholder="Brugernavn?" />
                 <textarea name="pip-content-modal" id="pip-content-modal" placeholder="Hvad sker der?" maxlength="255"
                   cols="30" rows="10"></textarea>
                 <div id="counter-modal">0 / 255 karakterer tilbage</div>
-                <input type="submit" value="Pip!" id="pip-submit1" />
+                <input type="submit" value="Pip!" id="pip-submit1"  />
               </form>
             </div>
             <!--               <div class="modal-footer">
@@ -73,9 +73,9 @@
     <!-- Indhold på siden -->
     <div class="content">
       <h1>Pipper</h1>
-      <form id="form-id" class="pip">
+      <form action="index.php" method="POST" id="form-id" class="pip">
         <img class="avatar-img" src="https://avatars.dicebear.com/api/male/Lalit%20Kishore.svg" />
-        <input type="text" id="pip-name" name="pip-name" maxlength="20" placeholder="Brugernavn?" />
+        <input type="text" id="pip-name" name="pip-name" maxlength="15" placeholder="Brugernavn?" />
         <textarea name="pip-content" id="pip-content" placeholder="Hvad sker der?" maxlength="255" cols="30"
           rows="10"></textarea>
         <div id="counter-content">0 / 255 karakterer tilbage</div>
@@ -83,6 +83,12 @@
       </form>
       <div id="all-new-notes"></div>
     </div>
+    
+
+    <!-- Tilføj GET -->
+    
+
+
   </div>
 
   <template id="new-pip">
