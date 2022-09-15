@@ -36,12 +36,12 @@ form.addEventListener("submit", (event) => {
   }));
 
   // Send modal pip form data
-  const httpModal = new XMLHttpRequest();
-  httpModal.open("POST", "http://localhost:8000", true);
-  httpModal.send(JSON.stringify({
-    "username": input.get("pip-name-modal"),
-    "message": input.get("pip-content-modal"),
-  }));
+  // const httpModal = new XMLHttpRequest();
+  // httpModal.open("POST", "http://localhost:8000", true);
+  // httpModal.send(JSON.stringify({
+  //   "username": input.get("pip-name-modal"),
+  //   "message": input.get("pip-content-modal"),
+  // }));
 
 
   
@@ -71,5 +71,6 @@ form1.addEventListener("submit", (event) => {
 });
 
 
+// GET fra Database
 
 
