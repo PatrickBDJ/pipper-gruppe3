@@ -13,72 +13,192 @@
 .sidebar {
   flex-direction: column;
   max-width: 20%;
-  border: 1px solid black;
   padding: 2%;
+  height: 100vh;
+  
+}
+
+.sidebar-logo {
+  width: 28px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+
+}
+
+.sidebar-logo:hover {
+  background-color: #1d9cf081;
+  border-radius: 25px;
 }
 
 .sidebar a {
   display: block;
   text-decoration: none;
-  color: #1D9BF0;
+  color: #000;
 }
 
-.sidebar-titles{
+.sidebar-titles {
   padding-left: 10px;
 }
 
-a {
-  box-shadow: inset 0 0 0 0 #54b3d6;
+.sidebar-link {
   border-radius: 25px;
-  color: #1D9BF0;
+  color: #000;
   margin: 0 -.25rem;
-  padding: 0 .25rem;
-  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+  padding: 2% .25rem;
+  transition-duration: 0.4s;
+
 }
 
-a:hover {
-  box-shadow: inset 200px 0 0 0 #1D9BF0;
-  color: white;
+.sidebar-link:hover {
+  box-shadow: inset 200px 0 0 0 #E7E7E8;
+  color: #1D9BF0;
 }
+
+.sidebar .btn {
+  background-color: #1D9BF0;
+  border-radius: 25px;
+  color: #ffffff;
+  margin: 2% -.25rem;
+  padding: 4px 56px;
+  font-weight: 600;
+  cursor: pointer;
+  transition-duration: 0.4s;
+
+}
+
+.sidebar .btn:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+
 
 /* Sidens indhold */
 .content {
-  width: 80%;
-  border: 1px solid black;
+  border: #E7E7E8 solid 2px;
+  border-style: none none none solid;
+  width: 50%;
   padding: 2%;
 }
 
 .content h1 {
-  font-family: multi-display, sans-serif;
-  font-weight: 400;
+  font-weight: 500;
   font-style: normal;
+  font-size: larger;
 }
 
-.avatar-img{
+.avatar-img {
   height: 50px;
   width: auto;
-  padding-bottom: 10px;
-  display: block;
+  margin: 10px;
+  border: #E7E7E8 solid 1px;
+  border-radius: 100%;
 }
 
 #pip-name {
-  display: block;
-  width: auto;
+  width: 85%;
 }
 
 #pip-content {
-  display: block;
+  height: 20vh;
+  width: 100%;
+}
+
+.buttom-bar {
+  display: flex;
+  align-items: baseline;
+  justify-content: end;
+  margin-right: 2%;
+}
+
+.buttom-bar input {
+  background-color: #1D9BF0;
+  border: none;
+  border-radius: 25px;
+  color: #ffffff;
+  margin: 0 0 4% 2%;
+  padding: 4px 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+
+.buttom-bar input:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
 /* Modal */
+#form-id-modal {
+  padding: 10px;
+  
+}
+
 .btn {
   font-size: 1rem;
   padding: 0;
 }
 
-/* .modal{
-    
-} */
+#pip-name-modal {
+  width: 83%
+}
+
+#pip-content-modal {
+  height: 20vh;
+  width: 100%;
+}
+
+/* Nye pips */
+.pip-box {
+  border: #E7E7E8 solid 1px;
+  border-radius: 5px;
+  padding: 2%;
+  margin: 2% 0;
+}
+
+.pip-box:hover {
+  background-color: #e7e7e834;
+}
+
+.user-pip {
+  display: flex;
+  align-items: center;
+}
+
+.interact {
+  display: flex;
+  justify-content: space-around;
+}
+
+.pip-icons {
+  width: 20px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+
+#comment:hover {
+  background-color: #1d9cf081;
+  border-radius: 5px;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#retweet:hover {
+  background-color: #59e99581;
+  border-radius: 5px;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#like:hover {
+  background-color: #f86b6b83;
+  border-radius: 5px;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#share:hover {
+  background-color: #1d9cf081;
+  border-radius: 5px;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+
 
 /* Sidebar titler er gemte, medmindre skærmen er 1024px eller større */
 .sidebar-titles {
