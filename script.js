@@ -26,12 +26,21 @@ form.addEventListener("submit", (event) => {
   console.log("Titel: ", input.get("pip-name"));
   console.log("Besked: ", input.get("pip-content"));
 
+  // Send pip form data
   const http = new XMLHttpRequest();
   http.open("POST", "http://localhost:8000", true);
   // http.setRequestHeader()
   http.send(JSON.stringify({
     "username": input.get("pip-name"),
     "message": input.get("pip-content"),
+  }));
+
+  // Send modal pip form data
+  const httpModal = new XMLHttpRequest();
+  httpModal.open("POST", "http://localhost:8000", true);
+  httpModal.send(JSON.stringify({
+    "username": input.get("pip-name-modal"),
+    "message": input.get("pip-content-modal"),
   }));
 
 
