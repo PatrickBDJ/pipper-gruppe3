@@ -136,8 +136,9 @@
           <img class="avatar-img" src="https://avatars.dicebear.com/api/male/Lalit%20Kishore.svg">
           <h1>username</h1>
         </div>
-        <div class="menu">
-          <img class="pip-icons" id="menu" src="/assets/menu.svg" alt="">
+        <div class="popup">
+          <img class="menu" onclick="myFunction()" id="menu" src="/assets/menu.svg" alt="">
+          <span class="popuptext" id="myPopup">Popup text...</span>
         </div>
       </div>
       <p>note</p>
@@ -160,6 +161,13 @@
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
   <script src="script.js"></script>
+  <script>
+    // When the user clicks on <div>, open the popup
+    function myFunction() {
+      var popup = document.getElementById("myPopup");
+      popup.classList.toggle("show");
+    }
+  </script>
 </body>
 
 </html>
