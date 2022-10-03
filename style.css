@@ -160,6 +160,11 @@
 
 .user-pip {
   display: flex;
+  justify-content: space-between;
+}
+
+.user {
+  display: flex;
   align-items: center;
 }
 
@@ -195,6 +200,12 @@
 #share:hover {
   background-color: #1d9cf081;
   border-radius: 5px;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#menu:hover {
+  background-color: #1d9cf081;
+  border-radius: 20px;
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
