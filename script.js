@@ -60,6 +60,16 @@ form1.addEventListener("submit", (event) => {
   const input1 = new FormData(form1);
   console.log("Titel: ", input1.get("pip-name-modal"));
   console.log("Besked: ", input1.get("pip-content-modal"));
+
+  // Send pip form data modal
+  const http = new XMLHttpRequest();
+  http.open("POST", "http://localhost:8000", true);
+  // http.setRequestHeader()
+  http.send(JSON.stringify({
+    "username": input1.get("pip-name-modal"),
+    "message": input1.get("pip-content-modal"),
+  }));
+
   
   const newNode = document.importNode(template1.content, true);
   newNode.querySelector("h1").textContent = input1.get("pip-name-modal");
@@ -71,6 +81,9 @@ form1.addEventListener("submit", (event) => {
 });
 
 
-// GET fra Database
-
+// GET Database
+const getPips = async () => {
+  const pips = await fetch("http://localhost:8000/pip");
+  return pips.json();
+};
 
