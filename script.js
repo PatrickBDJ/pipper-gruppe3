@@ -29,19 +29,11 @@ form.addEventListener("submit", (event) => {
   // Send pip form data
   const http = new XMLHttpRequest();
   http.open("POST", "http://localhost:8000", true);
-  // http.setRequestHeader()
   http.send(JSON.stringify({
     "username": input.get("pip-name"),
     "message": input.get("pip-content"),
   }));
 
-  // Send modal pip form data
-  // const httpModal = new XMLHttpRequest();
-  // httpModal.open("POST", "http://localhost:8000", true);
-  // httpModal.send(JSON.stringify({
-  //   "username": input.get("pip-name-modal"),
-  //   "message": input.get("pip-content-modal"),
-  // }));
 
 
   
@@ -64,7 +56,6 @@ form1.addEventListener("submit", (event) => {
   // Send pip form data modal
   const http = new XMLHttpRequest();
   http.open("POST", "http://localhost:8000", true);
-  // http.setRequestHeader()
   http.send(JSON.stringify({
     "username": input1.get("pip-name-modal"),
     "message": input1.get("pip-content-modal"),
@@ -82,8 +73,24 @@ form1.addEventListener("submit", (event) => {
 
 
 // GET Database
-const getPips = async () => {
-  const pips = await fetch("http://localhost:8000/pip");
-  return pips.json();
+var requestOptions = {
+  method: 'GET',
+  redirect: 'follow'
 };
 
+fetch("http://localhost:8000/", requestOptions)
+  .then(response => response.json())
+  .then(result =>{
+    for (const item of result) {
+      console.log( item.username);
+      console.log( item.message);
+      
+      
+    }
+  })
+  .catch(error => console.log('error', error));
+  
+
+  /*   .then(result => for (let i = 0; i < result.length; i++) {
+    console.log( result[i] );
+  }) */
