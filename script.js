@@ -78,19 +78,22 @@ var requestOptions = {
   redirect: 'follow'
 };
 
+function fillTemplate(formTitel, formText){
+  const template = document.querySelector("#new-pip");
+  const newNode = document.importNode(template.content, true);
+  newNode.querySelector("h1").textContent = formTitel;
+  newNode.querySelector("p").textContent = formText;
+  document.querySelector("#all-new-notes").appendChild(newNode);
+};
+
 fetch("http://localhost:8000/", requestOptions)
   .then(response => response.json())
   .then(result =>{
     for (const item of result) {
-      console.log( item.username);
-      console.log( item.message);
-      
+      console.log(item.username);
+      console.log(item.message);
+      fillTemplate(item.username, item.message);
       
     }
   })
   .catch(error => console.log('error', error));
-  
-
-  /*   .then(result => for (let i = 0; i < result.length; i++) {
-    console.log( result[i] );
-  }) */
