@@ -48,6 +48,30 @@ elseif($requestType == "POST"){
       'avatar' => "#"
     ));
 }
+elseif($requestType == "DELETE"){
+  $conn = new PDO("mysql:host=$servername;dbname=pipper", $username, $password);
+
+  $input = (array) json_decode(file_get_contents('php://input'), TRUE);
+  $id = $input["id"];
+
+  $sql = "
+    DELETE FROM pip WHERE id=?;
+  ";
+  $stmt= $conn->prepare($sql);
+  $stmt->execute([$id]);;
+}
+elseif($requestType == "PUT"){
+  $conn = new PDO("mysql:host=$servername;dbname=pipper", $username, $password);
+
+  $input = (array) json_decode(file_get_contents('php://input'), TRUE);
+  $id = $input["id"];
+  $username = $input["username"];
+  $message = $input["message"];
+
+  $sql = "UPDATE pip SET username=?, message=? WHERE id=?";
+  $stmt= $conn->prepare($sql);
+  $stmt->execute([$username, $message, $id]);
+}
 
 
 

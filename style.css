@@ -354,7 +354,9 @@
 
 
 /* Modal update */
-
+.hide{
+  display: none;  
+}
 
 
 
