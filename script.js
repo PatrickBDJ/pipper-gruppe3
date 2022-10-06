@@ -16,6 +16,15 @@ myTextArea1.addEventListener("input", () => {
     myTextArea1.value.length + " / " + "255 karakterer tilbage";
 });
 
+// pip edit tæller
+const myTextArea2 = document.getElementById("edit-message");
+
+myTextArea2.addEventListener("input", () => {
+  myTextArea.value.length;
+  document.getElementById("counter-edit").innerHTML =
+    myTextArea2.value.length + " / " + "255 karakterer tilbage";
+});
+
 // Ny pip
 const form = document.querySelector("#form-id");
 const template = document.querySelector("#new-pip");
@@ -33,14 +42,16 @@ form.addEventListener("submit", (event) => {
     "username": input.get("pip-name"),
     "message": input.get("pip-content"),
   }));
-
-
-
+  http.onreadystatechange = () => {
+    if (http.status==200){
+      window.location.reload();
+    }
+  };
   
   const newNode = document.importNode(template.content, true);
   newNode.querySelector("h1").textContent = input.get("pip-name");
   newNode.querySelector("p").textContent = input.get("pip-content");
-  console.log(newNode.querySelector("#delete"));
+  /* console.log(newNode.querySelector("#delete")); */
 /*   newNode.querySelector("#delete").addEventListener("click", () => {
     console.log("hello world");
   }); */
@@ -55,8 +66,8 @@ const template1 = document.querySelector("#new-pip");
 form1.addEventListener("submit", (event) => {
   event.preventDefault();
   const input1 = new FormData(form1);
-  console.log("Titel: ", input1.get("pip-name-modal"));
-  console.log("Besked: ", input1.get("pip-content-modal"));
+/*   console.log("Titel: ", input1.get("pip-name-modal"));
+  console.log("Besked: ", input1.get("pip-content-modal")); */
 
   // Send pip form data modal
   const http = new XMLHttpRequest();
@@ -65,8 +76,12 @@ form1.addEventListener("submit", (event) => {
     "username": input1.get("pip-name-modal"),
     "message": input1.get("pip-content-modal"),
   }));
+  http.onreadystatechange = () => {
+    if (http.status==200){
+      window.location.reload();
+    }
+  };
 
-  
   const newNode = document.importNode(template1.content, true);
   newNode.querySelector("h1").textContent = input1.get("pip-name-modal");
   newNode.querySelector("p").textContent = input1.get("pip-content-modal");
@@ -104,16 +119,18 @@ function fillTemplate(formTitel, formText, id){
     http.send(JSON.stringify({
       "id": id
     }));
-    console.log(id);
+  /*   console.log(id); */
   });
   newNode.querySelector("#edit").addEventListener("click", () =>{
-    console.log("test");
-    console.log(id);
+/*     console.log("test"); */
+/*     console.log(id); */
 
     document.getElementById("overlay").classList.remove('hide');
     document.querySelector(".edit-id").value = id;
     document.querySelector(".edit-username").value = formTitel;
     document.querySelector(".edit-message").value = formText;
+
+    /* Hide pop-up */
     
 
   });
@@ -121,7 +138,7 @@ function fillTemplate(formTitel, formText, id){
   const idEdit = document.querySelector(".edit-id").value;
   const usernameEdit = document.querySelector(".edit-username").value;
   const messageEdit = document.querySelector(".edit-message").value;
-    console.log(idEdit, usernameEdit, messageEdit);
+/*     console.log(idEdit, usernameEdit, messageEdit); */
 
     const http = new XMLHttpRequest();
     http.open("PUT", "http://localhost:8000", true);
@@ -149,7 +166,6 @@ fetch("http://localhost:8000/", requestOptions)
       console.log(item.message); */
 /*       console.log(item.id); */
       fillTemplate(item.username, item.message, item.id);
-      
     }
   })
   .catch(error => console.log('error', error));

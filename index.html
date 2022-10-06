@@ -81,10 +81,10 @@
                         <div class="user">
                           <img class="avatar-img" src="https://avatars.dicebear.com/api/male/Lalit%20Kishore.svg" />
                           <input type="text" id="pip-name-modal" name="pip-name-modal" maxlength="15"
-                            placeholder="Brugernavn?" />
+                            placeholder="Brugernavn?" required/>
                         </div>
                         <textarea name="pip-content-modal" id="pip-content-modal" placeholder="Hvad sker der?"
-                          maxlength="255" cols="30" rows="10"></textarea>
+                          maxlength="255" cols="30" rows="10" required></textarea>
                         <div class="buttom-bar">
                           <div id="counter-modal">0 / 255 karakterer tilbage</div>
                           <input type="submit" value="pip!" id="pip-submit1" />
@@ -114,10 +114,10 @@
         <form action="index.php" method="POST" id="form-id" class="pip">
           <div class="user">
             <img class="avatar-img" src="https://avatars.dicebear.com/api/male/Lalit%20Kishore.svg" />
-            <input type="text" id="pip-name" name="pip-name" maxlength="15" placeholder="Brugernavn?" />
+            <input type="text" id="pip-name" name="pip-name" maxlength="15" placeholder="Brugernavn?" required/>
           </div>
           <textarea name="pip-content" id="pip-content" placeholder="Hvad sker der?" maxlength="255" cols="30"
-            rows="10"></textarea>
+            rows="10" required></textarea>
           <div class="buttom-bar">
             <div id="counter-content">0 / 255 karakterer tilbage</div>
             <input type="submit" value="pip!" id="pip-submit" />
@@ -126,16 +126,20 @@
         
         <!-- Modal update -->
         <div class="overlay hide" id="overlay">
-          <h3>Test</h3>
+          <h3>Rediger</h3>
 
           <div class="edit">
             <input type="hidden" class="edit-id">
-            <input type="text" class="edit-username">
-            <textarea class="edit-message" cols="30" rows="10"></textarea>
-            <input type="submit" id="edit-btn">
+            <label for="edit-username">Brugernavn:</label>
+            <br>
+            <input type="text" name="edit-username" class="edit-username" required>
+            <br><br>
+            <label for="edit-message">Besked:</label>
+            <br>
+            <textarea name="edit-message" class="edit-message" id="edit-message" maxlength="255" cols="30" rows="10" required></textarea>
+              <div id="counter-edit">0 / 255 karakterer tilbage</div>
+            <input type="submit" id="edit-btn" value="Gem ændringer">
           </div>
-
-          <h3>Test</h3>
         </div>
 
 
@@ -143,8 +147,6 @@
         <div id="all-new-notes"></div>
       </div>
 
-
-      
 
       
       <template id="new-pip">

@@ -21,7 +21,7 @@ try {
     $conn = new PDO("mysql:host=$servername;dbname=pipper", $username, $password);
     // set the PDO error mode to exception
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $statement = $conn->query("select * from pip");
+    $statement = $conn->query("select * from pip ORDER BY id DESC");
     $result = $statement->fetchAll();
 
     echo json_encode($result);

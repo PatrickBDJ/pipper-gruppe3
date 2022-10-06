@@ -355,8 +355,15 @@
 
 /* Modal update */
 .hide{
-  display: none;  
+  display: none !important;  
 }
+
+.overlay{
+  display:flex;
+  flex-direction: column;
+}
+
+
 
 
 
