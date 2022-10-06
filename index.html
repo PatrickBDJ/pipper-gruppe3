@@ -125,13 +125,18 @@
         </form>
 
         <!-- Modal update -->
-        <div class="overlay hide" id="overlay">
+        <div class="overlay " id="overlay">
           <div class="edit">
             <h6>Rediger pip</h6>
-            <input type="hidden" class="edit-id">
-            <input type="text" class="edit-username">
-            <textarea class="edit-message" cols="30" rows="10"></textarea>
-            <input type="submit" id="edit-btn">
+            <div class="user">
+              <img class="avatar-img" src="https://avatars.dicebear.com/api/male/Lalit%20Kishore.svg">
+              <input type="hidden" class="edit-id">
+              <input type="text" class="edit-username">
+            </div>
+            <div>
+              <textarea class="edit-message" cols="30" rows="10"></textarea>
+            </div>
+            <input class="edit-btn" type="submit" id="edit-btn">
           </div>
         </div>
 

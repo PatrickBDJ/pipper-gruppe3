@@ -359,6 +359,23 @@
 }
 
 
+.edit-btn {
+  background-color: #1D9BF0;
+  border-radius: 25px;
+  color: #ffffff;
+  margin: 2% -.25rem;
+  padding: 4px 56px;
+  font-weight: 600;
+  cursor: pointer;
+  transition-duration: 0.4s;
+
+}
+
+.sidebar .btn:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+
 
 
 /* Sidebar titler er gemte, medmindre skærmen er 1024px eller større */
