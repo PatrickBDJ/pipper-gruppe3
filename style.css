@@ -355,13 +355,16 @@
 
 /* Modal update */
 .hide{
-  display: none;  
+  display: none; 
 }
 
 .overlay {
-  display: flex;
-  width: 100%;
+  border: #E7E7E8 solid 1px;
+  border-radius: 5px;
+  margin: 20px 0 20px 20px;
+  background-color: #e7e7e834;
 }
+
 
 
 .edit-btn {
