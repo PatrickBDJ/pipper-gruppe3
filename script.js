@@ -90,10 +90,14 @@ fetch("http://localhost:8000/", requestOptions)
   .then(response => response.json())
   .then(result =>{
     for (const item of result) {
-      console.log(item.username);
-      console.log(item.message);
+/*       console.log(item.username);
+      console.log(item.message); */
       fillTemplate(item.username, item.message);
       
     }
   })
   .catch(error => console.log('error', error));
+
+
+
+  /* Modal update */
